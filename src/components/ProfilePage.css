@@ -1,33 +1,107 @@
-.profile-page{
-  background-color: rgba(26, 20, 20, 0.055);
+/*used in both profile and edit proofile page*/
+.profile-page {
+  background-color: rgba(58, 57, 59, 0.863);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
   height: 100vh;
 }
 
-.personal-data{
+/*used in both profile and edit proofile page*/
+.profile-title {
+  color: white;
+  font-size: 15pt;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding-top: 10pt;
+  padding-left: 10pt;
+}
+
+.personal-data {
   width: 40vw;
   height: 150pt;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: -10pt;
+  color: white;
+  margin: 20pt 0pt;
 }
 
-.profile-pic{
-width: 100pt;
-height: 100pt;
-border-radius: 50pt;
+.profile-pic {
+  width: 100pt;
+  height: 100pt;
+  border-radius: 50pt;
+}
+
+.profile-name {
+  font-size: 16pt;
+  font-weight: 700;
+  margin-bottom: 0pt;
+}
+
+.profile-email {
+  font-size: 13pt;
 
 }
-ul{
+
+.navigation{
+  align-self: flex-start;
+}
+
+.navigation ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  align-items: flex-start;
+  row-gap: 15pt;
 }
-.navigation {
+
+.profile-item {
+  /* height: 20pt; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation span {
   text-decoration: none;
-  color: red;
+  color: white;
+  margin-left: 1rem; /* Add some spacing between the icon and the text */
+
+}
+
+.navigation a {
+  text-decoration: none;
+
+}
+
+/*edit profile page css here*/
+.profile-edit-form{
+
+}
+.profile-edit-form input,
+select {
+  background-color: rgba(58, 57, 59, 0.256);
+  width: 75vw;
+  height: 30pt;
+  border-radius: 5pt;
+  margin: 5pt 0;
+  border-color: white;
+  border-width: 1pt;
+  color: rgba(200, 198, 194, 0.893);
+  padding: 0;
+}
+
+.profile-edit-form button {
+  width: 75vw;
+  height: 30pt;
+  background-color: rgb(8, 105, 216);
+  color: white;
+  border-radius: 5pt;
+  padding: 0;
 }
