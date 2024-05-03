@@ -1,15 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ProfilePage from './components/ProfilePage';
+import EditProfile from './components/EditProfile';
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className='app'>
         
         <Routes>
-          <Route path="/about" Component={About}>
+          <Route path="/edit-profile" Component={EditProfile}>
           </Route>
           <Route path="/contact" Component={Contact}>
           </Route>
@@ -19,14 +19,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function Contact() {

@@ -1,5 +1,5 @@
 .profile-page{
-  background-color: rgba(101, 97, 97, 0.228);
+  background-color: rgba(26, 20, 20, 0.055);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,5 +9,17 @@
 }
 
 .personal-data{
-  width: 70vw;
+  width: 40vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-pic{
+width: 100pt;
+height: 100pt;
+border-radius: 50pt;
+
 }
