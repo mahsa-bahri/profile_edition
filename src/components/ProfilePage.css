@@ -10,11 +10,12 @@
 
 .personal-data{
   width: 40vw;
-  height: 50vh;
+  height: 150pt;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  row-gap: -10pt;
 }
 
 .profile-pic{
@@ -22,4 +23,11 @@ width: 100pt;
 height: 100pt;
 border-radius: 50pt;
 
+}
+ul{
+  list-style: none;
+}
+.navigation {
+  text-decoration: none;
+  color: red;
 }

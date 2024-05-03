@@ -11,9 +11,13 @@ function App() {
         <Routes>
           <Route path="/edit-profile" Component={EditProfile}>
           </Route>
-          <Route path="/contact" Component={Contact}>
+          <Route path="/payment" Component={Payment}>
+          </Route>
+          <Route path="/security" Component={Security}>
           </Route>
           <Route path="/profile" Component={ProfilePage}>
+          </Route>
+          <Route path="/logout" Component={Logout}>
           </Route>
         </Routes>
       </div>
@@ -21,7 +25,13 @@ function App() {
   );
 }
 
-function Contact() {
-  return <h2>Contact</h2>;
+function Payment() {
+  return <h2>payment</h2>;
+}
+function Security() {
+  return <h2>security</h2>;
+}
+function Logout() {
+  return <h2>logout</h2>;
 }
 export default App;
