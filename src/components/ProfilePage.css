@@ -1,0 +1,13 @@
+.profile-page{
+  background-color: rgba(101, 97, 97, 0.228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.personal-data{
+  width: 70vw;
+}
