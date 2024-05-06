@@ -1,5 +1,6 @@
 /*used in both profile and edit proofile page*/
 .profile-page {
+  z-index: 1;
   background-color: rgba(58, 57, 59, 0.863);
   display: flex;
   flex-direction: column;
@@ -13,6 +14,9 @@
 .profile-title {
   color: white;
   font-size: 15pt;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10pt;
   align-self: flex-start;
   justify-self: flex-start;
   padding-top: 10pt;
@@ -39,7 +43,8 @@
 .profile-name {
   font-size: 16pt;
   font-weight: 700;
-  margin-bottom: 0pt;
+  margin-bottom: 5pt;
+  margin-top: 20pt;
 }
 
 .profile-email {
@@ -47,7 +52,7 @@
 
 }
 
-.navigation{
+.navigation {
   align-self: flex-start;
 }
 
@@ -58,6 +63,7 @@
   justify-self: flex-start;
   align-items: flex-start;
   row-gap: 15pt;
+  margin-left: 10pt;
 }
 
 .profile-item {
@@ -71,7 +77,8 @@
 .navigation span {
   text-decoration: none;
   color: white;
-  margin-left: 1rem; /* Add some spacing between the icon and the text */
+  margin-left: 1rem;
+  /* Add some spacing between the icon and the text */
 
 }
 
@@ -81,16 +88,18 @@
 }
 
 /*edit profile page css here*/
-.profile-edit-form{
 
+.profile-edit-form {
+  margin: 20pt;
 }
+
 .profile-edit-form input,
 select {
   background-color: rgba(58, 57, 59, 0.256);
   width: 75vw;
-  height: 30pt;
+  height: 35pt;
   border-radius: 5pt;
-  margin: 5pt 0;
+  margin: 8pt 0;
   border-color: white;
   border-width: 1pt;
   color: rgba(200, 198, 194, 0.893);
@@ -103,5 +112,6 @@ select {
   background-color: rgb(8, 105, 216);
   color: white;
   border-radius: 5pt;
+  margin-top: 30pt;
   padding: 0;
 }

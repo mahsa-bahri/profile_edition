@@ -1,0 +1,44 @@
+.dropdown {
+  background-color: rgba(58, 57, 59, 0.863);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30vh;
+  width: 100vw;
+  margin-bottom: 0;
+  border-radius: 30pt 30pt 0 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 10pt;
+}
+
+.logut-title {
+  color: red;
+  font-size: 18pt;
+
+}
+
+.logout-btns {
+  margin-top: 20pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20pt;
+}
+
+.logout-btn {
+  width: 80pt;
+  height: 40pt;
+  border-radius: 5pt;
+
+}

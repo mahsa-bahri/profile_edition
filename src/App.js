@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import ProfilePage from './components/ProfilePage';
 import EditProfile from './components/EditProfile';
+import Logout from './components/Logout';
+
 
 function App() {
   return (
@@ -17,8 +19,7 @@ function App() {
           </Route>
           <Route path="/profile" Component={ProfilePage}>
           </Route>
-          <Route path="/logout" Component={Logout}>
-          </Route>
+          
         </Routes>
       </div>
     </Router>
@@ -30,8 +31,5 @@ function Payment() {
 }
 function Security() {
   return <h2>security</h2>;
-}
-function Logout() {
-  return <h2>logout</h2>;
 }
 export default App;
