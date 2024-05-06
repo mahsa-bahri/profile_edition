@@ -11,13 +11,13 @@ function App() {
       <div className='app'>
         
         <Routes>
-          <Route path="/edit-profile" Component={EditProfile}>
+          <Route path="/edit-profile" Component={EditProfile} props={{FormData}}>
           </Route>
           <Route path="/payment" Component={Payment}>
           </Route>
           <Route path="/security" Component={Security}>
           </Route>
-          <Route path="/profile" Component={ProfilePage}>
+          <Route path="/" Component={ProfilePage}>
           </Route>
           
         </Routes>

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-export default function EditProfile() {
+export default function EditProfile(props) {
   const [formData, setFormData] = useState({
-    name: "mahsa ",
+    name: "",
     familyName: "",
     email: "",
     birthdate: "",
@@ -18,18 +18,28 @@ export default function EditProfile() {
       ...formData,
       [name]: value,
     });
-    console.log(formData);
+    // console.log(formData);
+
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
     console.log(formData);
+    const userDataString = JSON.stringify(formData);
+    localStorage.removeItem('userData');
+    localStorage.setItem('userData', userDataString);
   };
+  useEffect(() => {
+    const data = window.localStorage.getItem('userData');
+    if (data !== null) {
+      setFormData(JSON.parse(data));
+    }
+  }, []);
 
   return (
     <div className="profile-page" >
-      <p className="profile-title"><Link to="/profile"><IoArrowBack color="white"/></Link> Edit Profile</p>
+      <p className="profile-title"><Link to="/"><IoArrowBack color="white"/></Link> Edit Profile</p>
       <form onSubmit={handleSubmit} className="profile-edit-form">
         <input
           type="text"
@@ -48,7 +58,7 @@ export default function EditProfile() {
         />
         <br />
         <input
-          type="date"
+          type="text"
           name="birthdate"
           value={formData.birthdate}
           onChange={handleChange}

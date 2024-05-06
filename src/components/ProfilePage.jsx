@@ -12,6 +12,14 @@ export default function ProfilePage() {
   const [logoutPressed, setLogoutPressed] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [formData, setFormData] = useState({
+    name: "mahsa ",
+    familyName: "Bahri",
+    email: "mahsabahri79@gmail.com",
+    birthdate: "2001",
+    phoneNumber: "09100000000",
+    gender: "female",
+  });
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -20,16 +28,30 @@ export default function ProfilePage() {
       }
     };
 
+    // Convert the data to a string before saving
+    const userDataString = JSON.stringify(formData);
+
+    // Save the data to local storage
+    localStorage.setItem('userData', userDataString);
+
+    console.log('Data saved successfully!');
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+
   }, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
     console.log("toggled");
   };
+
+  const handlelogoutFromProfile = (newData) => {
+    setIsOpen(newData);
+  };
+
   return (
     <div className={isOpen ?"profile-page unblur":"profile-page "} ref={dropdownRef}>
       <p className="profile-title">Profile</p>
@@ -44,7 +66,7 @@ export default function ProfilePage() {
       <nav className="navigation">
         <ul>
           <li className="navigation">
-            <Link to="/edit-profile" className="no-underline ...">
+            <Link to="/edit-profile" className="no-underline ..." >
               <div className="profile-item">
                 <CgProfile color="white" /> <span>edit profile</span>
               </div>
@@ -75,7 +97,7 @@ export default function ProfilePage() {
         </ul>
       </nav>
       
-      {isOpen && <Logout />}
+      {isOpen && <Logout onIsOpen={}/>}
     </div>
   );
 }
