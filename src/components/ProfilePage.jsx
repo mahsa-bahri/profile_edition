@@ -97,7 +97,7 @@ export default function ProfilePage() {
         </ul>
       </nav>
       
-      {isOpen && <Logout onIsOpen={}/>}
+      {isOpen && <Logout IsOpenChanger={setIsOpen}/>}
     </div>
   );
 }

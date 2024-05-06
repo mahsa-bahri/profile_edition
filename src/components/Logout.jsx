@@ -7,23 +7,9 @@ export default function Logout(props) {
   const handleLogout = (e) => {
     e.preventDefault();
     localStorage.removeItem("userData");
+    props.IsOpenChanger(false)
   };
-
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       setIsOpen(false);
-  //     }
-  //   };
-
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener('mousedown', handleClickOutside);
-  //   };
-  // }, []);
-  function hancleClick(e) {
-    props.onIsOpen({...props.isOpen})
-  }
+  
   return (
     <div className="dropdown">
       <div>
@@ -34,6 +20,7 @@ export default function Logout(props) {
             <button
               className="logout-btn"
               style={{ backgroundColor: "white", color: "blue" }}
+              onClick={()=>props.IsOpenChanger(false)}
             >
               cancel
             </button>
