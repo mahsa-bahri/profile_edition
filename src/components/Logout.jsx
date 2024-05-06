@@ -14,6 +14,7 @@ export default function Logout(props) {
     <div className="dropdown">
       <div>
         <div className="dropdown-content">
+          <div className="small-line"></div>
           <p className="logut-title">log out </p>
           log out are you sure you want to logout?
           <div className="logout-btns">

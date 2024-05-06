@@ -21,6 +21,7 @@
   justify-self: flex-start;
   padding-top: 10pt;
   padding-left: 10pt;
+font-weight: bolder;
 }
 
 .personal-data {
@@ -31,7 +32,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  margin: 20pt 0pt;
+  margin: 20pt 0pt 40pt 0;
 }
 
 .profile-pic {
@@ -62,7 +63,7 @@
   flex-direction: column;
   justify-self: flex-start;
   align-items: flex-start;
-  row-gap: 15pt;
+  row-gap: 20pt;
   margin-left: 10pt;
 }
 
